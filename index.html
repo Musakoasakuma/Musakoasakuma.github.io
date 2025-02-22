@@ -591,1093 +591,1278 @@
         let click4032;
 
 
-        function changeColor101(element) {
+function changeColor101(element) {
 
-            click1012 = new Date().getTime();
+    click1012 = new Date().getTime();
 
-            if (click1012 - click1011 <= 300) {
-                if (element.id === "box101" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime101 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1012 - click1011 <= 300) { // タッチ時間の長さ条件
+        if (element.id === "box101" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // 黄色に変更
+            startTime101 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1011 = click1012;
+            // 90分後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 90分後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor102(element) {
-
-            click1022 = new Date().getTime();
-
-            if (click1022 - click1021 <= 300) {
-                if (element.id === "box102" && element.style.backgroundColor === "white") {
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime102 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1021 = click1022;
+         else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if(click1012 - click1011 > 300 && 1000 >= click1012 - click1011 ){　// 予約の設定
+        element.style.backgroundColor = "gray";
+    }
+    click1011 = click1012;
+}
 
-        function changeColor103(element) {
+function changeColor102(element) {
 
-            click1032 = new Date().getTime();
+    click1022 = new Date().getTime();
 
-            if (click1032 - click1031 <= 300) {
-                if (element.id === "box103" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime103 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1022 - click1021 <= 300) {
+        if (element.id === "box102" && element.style.backgroundColor === "white") {
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime102 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1031 = click1032;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
 
-        function changeColor104(element) {
-
-            click1042 = new Date().getTime();
-
-            if (click1042 - click1041 <= 300) {
-                if (element.id === "box104" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime104 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1041 = click1042;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor105(element) {
-
-            click1052 = new Date().getTime();
-
-            if (click1052 - click1051 <= 300) {
-                if (element.id === "box105" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime105 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1051 = click1052;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1022 - click1021 > 300 && 1000 >= click1022 - click1021) {
+        element.style.backgroundColor = "gray";
+    }
+    click1021 = click1022;
+}
 
-        function changeColor106(element) {
+function changeColor103(element) {
 
-            click1062 = new Date().getTime();
+    click1032 = new Date().getTime();
 
-            if (click1062 - click1061 <= 300) {
-                if (element.id === "box106" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime106 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1032 - click1031 <= 300) {
+        if (element.id === "box103" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime103 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1061 = click1062;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
 
-        function changeColor107(element) {
-
-            click1072 = new Date().getTime();
-
-            if (click1072 - click1071 <= 300) {
-                if (element.id === "box107" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime107 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1071 = click1072;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1032 - click1031 > 300 && 1000 >= click1032 - click1031) {
+        element.style.backgroundColor = "gray";
+    }
+    click1031 = click1032;
+}
 
-        function changeColor108(element) {
+function changeColor104(element) {
 
-            click1082 = new Date().getTime();
+    click1042 = new Date().getTime();
 
-            if (click1082 - click1081 <= 300) {
-                if (element.id === "box108" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime108 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1042 - click1041 <= 300) {
+        if (element.id === "box104" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime104 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1081 = click1082;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor109(element) {
-
-            click1092 = new Date().getTime();
-
-            if (click1092 - click1091 <= 300) {
-                if (element.id === "box109" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime109 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1091 = click1092;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1042 - click1041 > 300 && 1000 >= click1042 - click1041) {
+        element.style.backgroundColor = "gray";
+    }
+    click1041 = click1042;
+}
 
-        function changeColor110(element) {
+function changeColor105(element) {
 
-            click1102 = new Date().getTime();
+    click1052 = new Date().getTime();
 
-            if (click1102 - click1101 <= 300) {
-                if (element.id === "box110" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime110 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1052 - click1051 <= 300) {
+        if (element.id === "box105" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime105 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1101 = click1102;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor111(element) {
-
-            click1112 = new Date().getTime();
-
-            if (click1112 - click1111 <= 300) {
-                if (element.id === "box111" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime111 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1111 = click1112;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1052 - click1051 > 300 && 1000 >= click1052 - click1051) {
+        element.style.backgroundColor = "gray";
+    }
+    click1051 = click1052;
+}
 
-        function changeColor112(element) {
+function changeColor106(element) {
 
-            click1122 = new Date().getTime();
+    click1062 = new Date().getTime();
 
-            if (click1122 - click1121 <= 300) {
-                if (element.id === "box112" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime112 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1062 - click1061 <= 300) {
+        if (element.id === "box106" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime106 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1121 = click1122;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor113(element) {
-
-            click1132 = new Date().getTime();
-
-            if (click1132 - click1131 <= 300) {
-                if (element.id === "box113" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime113 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1131 = click1132;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1062 - click1061 > 300 && 1000 >= click1062 - click1061) {
+        element.style.backgroundColor = "gray";
+    }
+    click1061 = click1062;
+}
 
-        function changeColor114(element) {
+function changeColor107(element) {
 
-            click1142 = new Date().getTime();
+    click1072 = new Date().getTime();
 
-            if (click1142 - click1141 <= 300) {
-                if (element.id === "box114" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime114 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1072 - click1071 <= 300) {
+        if (element.id === "box107" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime107 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1141 = click1142;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor115(element) {
-
-            click1152 = new Date().getTime();
-
-            if (click1152 - click1151 <= 300) {
-                if (element.id === "box115" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime115 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1151 = click1152;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1072 - click1071 > 300 && 1000 >= click1072 - click1071) {
+        element.style.backgroundColor = "gray";
+    }
+    click1071 = click1072;
+}
 
-        function changeColor116(element) {
+function changeColor108(element) {
 
-            click1162 = new Date().getTime();
+    click1082 = new Date().getTime();
 
-            if (click1162 - click1161 <= 300) {
-                if (element.id === "box116" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime116 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1082 - click1081 <= 300) {
+        if (element.id === "box108" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime108 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1161 = click1162;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor117(element) {
-
-            click1172 = new Date().getTime();
-
-            if (click1172 - click1171 <= 300) {
-                if (element.id === "box117" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime117 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                            element.style.backgroundColor = "red";    
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click1171 = click1172;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1082 - click1081 > 300 && 1000 >= click1082 - click1081) {
+        element.style.backgroundColor = "gray";
+    }
+    click1081 = click1082;
+}
 
-        function changeColor201(element) {
+function changeColor109(element) {
 
-            click2012 = new Date().getTime();
+    click1092 = new Date().getTime();
 
-            if (click2012 - click2011 <= 300) {
-                if (element.id === "box201" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime201 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1092 - click1091 <= 300) {
+        if (element.id === "box109" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime109 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime201) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2011 = click2012;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor202(element) {
-
-            click2022 = new Date().getTime();
-
-            if (click2022 - click2021 <= 300) {
-                if (element.id === "box202" && element.style.backgroundColor === "white") {
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime202 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime202) >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2021 = click2022;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1092 - click1091 > 300 && 1000 >= click1092 - click1091) {
+        element.style.backgroundColor = "gray";
+    }
+    click1091 = click1092;
+}
 
-        function changeColor203(element) {
+function changeColor110(element) {
 
-            click2032 = new Date().getTime();
+    click1102 = new Date().getTime();
 
-            if (click2032 - click2031 <= 300) {
-                if (element.id === "box203" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime203 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1102 - click1101 <= 300) {
+        if (element.id === "box110" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime110 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime203) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2031 = click2032;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor204(element) {
-
-            click2042 = new Date().getTime();
-
-            if (click2042 - click2041 <= 300) {
-                if (element.id === "box204" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime204 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime204) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2041 = click2042;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1102 - click1101 > 300 && 1000 >= click1102 - click1101) {
+        element.style.backgroundColor = "gray";
+    }
+    click1101 = click1102;
+}
 
-        function changeColor205(element) {
+function changeColor111(element) {
 
-            click2052 = new Date().getTime();
+    click1112 = new Date().getTime();
 
-            if (click2052 - click2051 <= 300) {
-                if (element.id === "box205" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime205 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1112 - click1111 <= 300) {
+        if (element.id === "box111" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime111 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime205) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2051 = click2052;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor206(element) {
-
-            click2062 = new Date().getTime();
-
-            if (click2062 - click2061 <= 300) {
-                if (element.id === "box206" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime206 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime206) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2061 = click2062;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1112 - click1111 > 300 && 1000 >= click1112 - click1111) {
+        element.style.backgroundColor = "gray";
+    }
+    click1111 = click1112;
+}
 
-        function changeColor207(element) {
+function changeColor112(element) {
 
-            click2072 = new Date().getTime();
+    click1122 = new Date().getTime();
 
-            if (click2072 - click2071 <= 300) {
-                if (element.id === "box207" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime207 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1122 - click1121 <= 300) {
+        if (element.id === "box112" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime112 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime207) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2071 = click2072;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor208(element) {
-
-            click2082 = new Date().getTime();
-
-            if (click2082 - click2081 <= 300) {
-                if (element.id === "box208" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime208 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime208) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2081 = click2082;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1122 - click1121 > 300 && 1000 >= click1122 - click1121) {
+        element.style.backgroundColor = "gray";
+    }
+    click1121 = click1122;
+}
 
-        function changeColor209(element) {
+function changeColor113(element) {
 
-            click2092 = new Date().getTime();
+    click1132 = new Date().getTime();
 
-            if (click2092 - click2091 <= 300) {
-                if (element.id === "box209" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime209 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1132 - click1131 <= 300) {
+        if (element.id === "box113" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime113 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime209) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2091 = click2092;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
 
-        function changeColor210(element) {
-
-            click2102 = new Date().getTime();
-
-            if (click2102 - click2101 <= 300) {
-                if (element.id === "box210" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime210 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime210) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2101 = click2102;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor211(element) {
-
-            click2112 = new Date().getTime();
-
-            if (click2112 - click2111 <= 300) {
-                if (element.id === "box211" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime211 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime211) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2111 = click2112;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1132 - click1131 > 300 && 1000 >= click1132 - click1131) {
+        element.style.backgroundColor = "gray";
+    }
+    click1131 = click1132;
+}
 
-        function changeColor212(element) {
+function changeColor114(element) {
 
-            click2122 = new Date().getTime();
+    click1142 = new Date().getTime();
 
-            if (click2122 - click2121 <= 300) {
-                if (element.id === "box212" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime212 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1142 - click1141 <= 300) {
+        if (element.id === "box114" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime114 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime212) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2121 = click2122;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
 
-        function changeColor213(element) {
-
-            click2132 = new Date().getTime();
-
-            if (click2132 - click2131 <= 300) {
-                if (element.id === "box213" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime213 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime213) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2131 = click2132;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
-
-        function changeColor214(element) {
-
-            click2142 = new Date().getTime();
-
-            if (click2142 - click2141 <= 300) {
-                if (element.id === "box214" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime214 = new Date().getTime();  // 計測開始時刻を取得
-
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime214) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2141 = click2142;
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    if (click1142 - click1141 > 300 && 1000 >= click1142 - click1141) {
+        element.style.backgroundColor = "gray";
+    }
+    click1141 = click1142;
+}
 
-        function changeColor215(element) {
+function changeColor115(element) {
 
-            click2152 = new Date().getTime();
+    click1152 = new Date().getTime();
 
-            if (click2152 - click2151 <= 300) {
-                if (element.id === "box215" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime215 = new Date().getTime();  // 計測開始時刻を取得
+    if (click1152 - click1151 <= 300) {
+        if (element.id === "box115" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime115 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime215) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
-                }
-            }
-            click2151 = click2152;
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
         }
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        }
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    if (click1152 - click1151 > 300 && 1000 >= click1152 - click1151) {
+        element.style.backgroundColor = "gray";
+    }
+    click1151 = click1152;
+}
+
+function changeColor116(element) {
+
+    click1162 = new Date().getTime();
+
+    if (click1162 - click1161 <= 300) {
+        if (element.id === "box116" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime116 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } 
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        }
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    if (click1162 - click1161 > 300 && 1000 >= click1162 - click1161) {
+        element.style.backgroundColor = "gray";
+    }
+    click1161 = click1162;
+}
+
+function changeColor117(element) {
+
+    click1172 = new Date().getTime();
+
+    if (click1172 - click1171 <= 300) {
+        if (element.id === "box117" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime117 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        }
+        else if (element.style.backgroundColor === "gray") {
+            element.style.backgroundColor = "yellow";
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        }
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    if (click1172 - click1171 > 300 && 1000 >= click1172 - click1171) {
+        element.style.backgroundColor = "gray";
+    }
+    click1171 = click1172;
+}
+
+function changeColor201(element) {
+
+    click2012 = new Date().getTime();
+
+    if (click2012 - click2011 <= 300) {
+        if (element.id === "box201" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime201 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                    element.style.backgroundColor = "red";
+            }, 5400000);
+        }
+        else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2011 = click2012;
+}
+
+function changeColor202(element) {
+
+    click2022 = new Date().getTime();
+
+    if (click2022 - click2021 <= 300) {
+        if (element.id === "box202" && element.style.backgroundColor === "white") {
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime202 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2021 = click2022;
+}
+
+function changeColor203(element) {
+
+    click2032 = new Date().getTime();
+
+    if (click2032 - click2031 <= 300) {
+        if (element.id === "box203" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime203 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2031 = click2032;
+}
+
+function changeColor204(element) {
+
+    click2042 = new Date().getTime();
+
+    if (click2042 - click2041 <= 300) {
+        if (element.id === "box204" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime204 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2041 = click2042;
+}
+
+function changeColor205(element) {
+
+    click2052 = new Date().getTime();
+
+    if (click2052 - click2051 <= 300) {
+        if (element.id === "box205" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime205 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2051 = click2052;
+}
+
+function changeColor206(element) {
+
+    click2062 = new Date().getTime();
+
+    if (click2062 - click2061 <= 300) {
+        if (element.id === "box206" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime206 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2061 = click2062;
+}
+
+function changeColor207(element) {
+
+    click2072 = new Date().getTime();
+
+    if (click2072 - click2071 <= 300) {
+        if (element.id === "box207" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime207 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2071 = click2072;
+}
+
+function changeColor208(element) {
+
+    click2082 = new Date().getTime();
+
+    if (click2082 - click2081 <= 300) {
+        if (element.id === "box208" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime208 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2081 = click2082;
+}
+
+function changeColor209(element) {
+
+    click2092 = new Date().getTime();
+
+    if (click2092 - click2091 <= 300) {
+        if (element.id === "box209" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime209 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2091 = click2092;
+}
+
+function changeColor210(element) {
+
+    click2102 = new Date().getTime();
+
+    if (click2102 - click2101 <= 300) {
+        if (element.id === "box210" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime210 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2101 = click2102;
+}
+
+function changeColor211(element) {
+
+    click2112 = new Date().getTime();
+
+    if (click2112 - click2111 <= 300) {
+        if (element.id === "box211" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime211 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2111 = click2112;
+}
+
+function changeColor212(element) {
+
+    click2122 = new Date().getTime();
+
+    if (click2122 - click2121 <= 300) {
+        if (element.id === "box212" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime212 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2121 = click2122;
+}
+
+function changeColor213(element) {
+
+    click2132 = new Date().getTime();
+
+    if (click2132 - click2131 <= 300) {
+        if (element.id === "box213" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime213 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2131 = click2132;
+}
+
+function changeColor214(element) {
+
+    click2142 = new Date().getTime();
+
+    if (click2142 - click2141 <= 300) {
+        if (element.id === "box214" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime214 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2141 = click2142;
+}
+
+function changeColor215(element) {
+
+    click2152 = new Date().getTime();
+
+    if (click2152 - click2151 <= 300) {
+        if (element.id === "box215" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime215 = new Date().getTime();  // 計測開始時刻を取得
+
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                element.style.backgroundColor = "red";
+            }, 5400000);
+
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
+        }
+    }
+    click2151 = click2152;
+}
 
         function changeColor301(element) {
 
-            click3012 = new Date().getTime();
+    click3012 = new Date().getTime();
 
-            if (click3012 - click3011 <= 300) {
-                if (element.id === "box301" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime301 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3012 - click3011 <= 300) {
+        if (element.id === "box301" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime301 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime301) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime301) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3011 = click3012;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3011 = click3012;
+}
 
-        function changeColor302(element) {
+function changeColor302(element) {
 
-            click3022 = new Date().getTime();
+    click3022 = new Date().getTime();
 
-            if (click3022 - click3021 <= 300) {
-                if (element.id === "box302" && element.style.backgroundColor === "white") {
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime302 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3022 - click3021 <= 300) {
+        if (element.id === "box302" && element.style.backgroundColor === "white") {
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime302 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime302) >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime302) >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3021 = click3022;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3021 = click3022;
+}
 
-        function changeColor303(element) {
+function changeColor303(element) {
 
-            click3032 = new Date().getTime();
+    click3032 = new Date().getTime();
 
-            if (click3032 - click3031 <= 300) {
-                if (element.id === "box303" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime303 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3032 - click3031 <= 300) {
+        if (element.id === "box303" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime303 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime303) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime303) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3031 = click3032;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3031 = click3032;
+}
 
-        function changeColor304(element) {
+function changeColor304(element) {
 
-            click3042 = new Date().getTime();
+    click3042 = new Date().getTime();
 
-            if (click3042 - click3041 <= 300) {
-                if (element.id === "box304" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime304 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3042 - click3041 <= 300) {
+        if (element.id === "box304" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime304 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime304) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime304) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3041 = click3042;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3041 = click3042;
+}
 
-        function changeColor305(element) {
+function changeColor305(element) {
 
-            click3052 = new Date().getTime();
+    click3052 = new Date().getTime();
 
-            if (click3052 - click3051 <= 300) {
-                if (element.id === "box305" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime305 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3052 - click3051 <= 300) {
+        if (element.id === "box305" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime305 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime305) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime305) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3051 = click3052;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3051 = click3052;
+}
 
-        function changeColor306(element) {
+function changeColor306(element) {
 
-            click3062 = new Date().getTime();
+    click3062 = new Date().getTime();
 
-            if (click3062 - click3061 <= 300) {
-                if (element.id === "box306" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime306 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3062 - click3061 <= 300) {
+        if (element.id === "box306" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime306 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime306) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime306) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3061 = click3062;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3061 = click3062;
+}
 
-        function changeColor307(element) {
+function changeColor307(element) {
 
-            click3072 = new Date().getTime();
+    click3072 = new Date().getTime();
 
-            if (click3072 - click3071 <= 300) {
-                if (element.id === "box307" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime307 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3072 - click3071 <= 300) {
+        if (element.id === "box307" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime307 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime307) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime307) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3071 = click3072;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3071 = click3072;
+}
 
-        function changeColor308(element) {
+function changeColor308(element) {
 
-            click3082 = new Date().getTime();
+    click3082 = new Date().getTime();
 
-            if (click3082 - click3081 <= 300) {
-                if (element.id === "box308" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime308 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3082 - click3081 <= 300) {
+        if (element.id === "box308" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime308 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime308) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime308) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3081 = click3082;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3081 = click3082;
+}
 
-        function changeColor309(element) {
+function changeColor309(element) {
 
-            click3092 = new Date().getTime();
+    click3092 = new Date().getTime();
 
-            if (click3092 - click3091 <= 300) {
-                if (element.id === "box309" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime309 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3092 - click3091 <= 300) {
+        if (element.id === "box309" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime309 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime309) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime309) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3091 = click3092;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3091 = click3092;
+}
 
-        function changeColor310(element) {
+function changeColor310(element) {
 
-            click3102 = new Date().getTime();
+    click3102 = new Date().getTime();
 
-            if (click3102 - click3101 <= 300) {
-                if (element.id === "box310" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime310 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3102 - click3101 <= 300) {
+        if (element.id === "box310" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime310 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime310) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime310) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3101 = click3102;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3101 = click3102;
+}
 
-        function changeColor311(element) {
+function changeColor311(element) {
 
-            click3112 = new Date().getTime();
+    click3112 = new Date().getTime();
 
-            if (click3112 - click3111 <= 300) {
-                if (element.id === "box311" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime311 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3112 - click3111 <= 300) {
+        if (element.id === "box311" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime311 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime311) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime311) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3111 = click3112;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3111 = click3112;
+}
 
-        function changeColor312(element) {
+function changeColor312(element) {
 
-            click3122 = new Date().getTime();
+    click3122 = new Date().getTime();
 
-            if (click3122 - click3121 <= 300) {
-                if (element.id === "box312" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime312 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3122 - click3121 <= 300) {
+        if (element.id === "box312" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime312 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime312) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime312) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3121 = click3122;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3121 = click3122;
+}
 
-        function changeColor313(element) {
+function changeColor313(element) {
 
-            click3132 = new Date().getTime();
+    click3132 = new Date().getTime();
 
-            if (click3132 - click3131 <= 300) {
-                if (element.id === "box313" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime313 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3132 - click3131 <= 300) {
+        if (element.id === "box313" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime313 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime313) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime313) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3131 = click3132;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3131 = click3132;
+}
 
-        function changeColor314(element) {
+function changeColor314(element) {
 
-            click3142 = new Date().getTime();
+    click3142 = new Date().getTime();
 
-            if (click3142 - click3141 <= 300) {
-                if (element.id === "box314" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime314 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3142 - click3141 <= 300) {
+        if (element.id === "box314" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime314 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime314) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime314) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3141 = click3142;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3141 = click3142;
+}
 
-        function changeColor315(element) {
+function changeColor315(element) {
 
-            click3152 = new Date().getTime();
+    click3152 = new Date().getTime();
 
-            if (click3152 - click3151 <= 300) {
-                if (element.id === "box315" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime315 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3152 - click3151 <= 300) {
+        if (element.id === "box315" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime315 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime315) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime315) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3151 = click3152;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3151 = click3152;
+}
 
-        function changeColor316(element) {
+function changeColor316(element) {
 
-            click3162 = new Date().getTime();
+    click3162 = new Date().getTime();
 
-            if (click3162 - click3161 <= 300) {
-                if (element.id === "box316" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime316 = new Date().getTime();  // 計測開始時刻を取得
+    if (click3162 - click3161 <= 300) {
+        if (element.id === "box316" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime316 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime316) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime316) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click3161 = click3162;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click3161 = click3162;
+}
 
-        function changeColor401(element) {
+function changeColor401(element) {
 
-            click4012 = new Date().getTime();
+    click4012 = new Date().getTime();
 
-            if (click4012 - click4011 <= 300) {
-                if (element.id === "box401" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime401 = new Date().getTime();  // 計測開始時刻を取得
+    if (click4012 - click4011 <= 300) {
+        if (element.id === "box401" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime401 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime401) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime401) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click4011 = click4012;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click4011 = click4012;
+}
 
-        function changeColor402(element) {
+function changeColor402(element) {
 
-            click4022 = new Date().getTime();
+    click4022 = new Date().getTime();
 
-            if (click4022 - click4021 <= 300) {
-                if (element.id === "box402" && element.style.backgroundColor === "white") {
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime402 = new Date().getTime();  // 計測開始時刻を取得
+    if (click4022 - click4021 <= 300) {
+        if (element.id === "box402" && element.style.backgroundColor === "white") {
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime402 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime402) >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime402) >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click4021 = click4022;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click4021 = click4022;
+}
 
-        function changeColor403(element) {
+function changeColor403(element) {
 
-            click4032 = new Date().getTime();
+    click4032 = new Date().getTime();
 
-            if (click4032 - click4031 <= 300) {
-                if (element.id === "box403" && element.style.backgroundColor === "white") { // 食事中
-                    element.style.backgroundColor = "gray"; // グレーに変更
-                    startTime403 = new Date().getTime();  // 計測開始時刻を取得
+    if (click4032 - click4031 <= 300) {
+        if (element.id === "box403" && element.style.backgroundColor === "white") { // 食事中
+            element.style.backgroundColor = "yellow"; // グレーに変更
+            startTime403 = new Date().getTime();  // 計測開始時刻を取得
 
-                    // 3秒後に色を赤に変更するタイマーを設定
-                    setTimeout(() => {　//　時間オーバー
-                        if (element.style.backgroundColor === "gray" && (new Date().getTime() - startTime403) / 1000 >= 5400) {
-                            element.style.backgroundColor = "red";
-                        }
-                    }, 5400000);
-                } else {
-                    element.style.backgroundColor = "white"; // 白に変更
+            // 3秒後に色を赤に変更するタイマーを設定
+            setTimeout(() => {　//　時間オーバー
+                if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime403) / 1000 >= 5400) {
+                    element.style.backgroundColor = "red";
                 }
-            }
-            click4031 = click4032;
+            }, 5400000);
+        } else {
+            element.style.backgroundColor = "white"; // 白に変更
         }
+    }
+    click4031 = click4032;
+}
 
         document.getElementById("box101").addEventListener("click", function () {
             changeColor101(this);
